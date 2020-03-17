@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="FavouriteMovie" representedClassName="FavouriteMovie" syncable="YES" codeGenerationType="class">
+        <attribute name="movieID" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MovieEntity" representedClassName="MovieEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="allReviewLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="allTrailerLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="overview" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="posterPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="releaseData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="voteAvg" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hasReviewsLink" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ReviewLinksEntity" inverseName="reviewForMovie" inverseEntity="ReviewLinksEntity" syncable="YES"/>
+        <relationship name="hasTrilersLink" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TrailerLinksEntity" inverseName="trailerForMovie" inverseEntity="TrailerLinksEntity" syncable="YES"/>
+    </entity>
+    <entity name="MovieEntity1" representedClassName="MovieEntity1" syncable="YES" codeGenerationType="class">
+        <attribute name="allReviewLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="allTrailerLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="overview" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="posterPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="releaseData" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="voteAvg" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hasReviewsLink" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="ReviewLinksEntity1" inverseName="reviewForMovie" inverseEntity="ReviewLinksEntity1" syncable="YES"/>
+        <relationship name="hasTrilersLink" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="TrailerLinksEntity1" inverseName="trailerForMovie" inverseEntity="TrailerLinksEntity1" syncable="YES"/>
+    </entity>
+    <entity name="ReviewLinksEntity" representedClassName="ReviewLinksEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="review" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="reviewForMovie" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MovieEntity" inverseName="hasReviewsLink" inverseEntity="MovieEntity" syncable="YES"/>
+    </entity>
+    <entity name="ReviewLinksEntity1" representedClassName="ReviewLinksEntity1" syncable="YES" codeGenerationType="class">
+        <attribute name="review" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="reviewForMovie" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="MovieEntity1" inverseName="hasReviewsLink" inverseEntity="MovieEntity1" syncable="YES"/>
+    </entity>
+    <entity name="TrailerLinksEntity" representedClassName="TrailerLinksEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="trailer" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="trailerForMovie" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MovieEntity" inverseName="hasTrilersLink" inverseEntity="MovieEntity" syncable="YES"/>
+    </entity>
+    <entity name="TrailerLinksEntity1" representedClassName="TrailerLinksEntity1" syncable="YES" codeGenerationType="class">
+        <attribute name="trailer" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="trailerForMovie" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="MovieEntity1" inverseName="hasTrilersLink" inverseEntity="MovieEntity1" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="FavouriteMovie" positionX="33.9375" positionY="-182.9765625" width="128" height="60"/>
+        <element name="MovieEntity" positionX="-220.99609375" positionY="-199.9765625" width="128" height="193"/>
+        <element name="ReviewLinksEntity" positionX="209.95703125" positionY="-103.9921875" width="128" height="73"/>
+        <element name="TrailerLinksEntity" positionX="206.0625" positionY="-17.0078125" width="128" height="73"/>
+        <element name="TrailerLinksEntity1" positionX="114.9765625" positionY="219.99609375" width="128" height="73"/>
+        <element name="ReviewLinksEntity1" positionX="111.97265625" positionY="127.99609375" width="128" height="73"/>
+        <element name="MovieEntity1" positionX="-213.0234375" positionY="33.01171875" width="128" height="193"/>
+    </elements>
+</model>
