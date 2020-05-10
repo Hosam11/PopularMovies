@@ -1,7 +1,8 @@
 # PopularMovies
 
-simple app that display data of movies that fetcted from api using alamofire and store it in storage using core date 
-and highlighte some movies as favoruties and show thoes movies in list via tab bar
+A simple app displays data that fetched from API using Alamofire. 
+Then it stores the data in a storage using Coredata.
+It also highlights some movies as favorite and shows them in a list using a tab bar.
 
 ## Screens
 ![home](https://user-images.githubusercontent.com/18370055/81503085-00afb200-92e2-11ea-8154-9746261de32e.PNG)
