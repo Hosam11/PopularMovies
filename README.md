@@ -4,7 +4,7 @@ A simple app displays data that fetched from API using Alamofire.
 Then it stores the data in a storage using Coredata.
 It also highlights some movies as favorite and shows them in a list using a tab bar.
 
-## Screens
+## Screenshout
 
  |  | | |
 ------------ | ------------- | -------------
